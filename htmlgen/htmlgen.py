@@ -481,6 +481,16 @@ def get_bit_info(dbstate, frameidx, bitidx, tiletype):
             else:
                 bgcolor = "#ff0000"
 
+        m = re.search(r"\.ZSRVAL_([AB])\[([0-9]+)\]$", bit_name)
+        if m:
+            bgcolor = "#88cc00"
+            label = "ZS" + m.group(1) + m.group(2)
+
+        m = re.search(r"\.ZINIT_([AB])\[([0-9]+)\]$", bit_name)
+        if m:
+            bgcolor = "#aaffaa"
+            label = "ZI" + m.group(1) + m.group(2)
+
         m = re.search(r"\.BRAM_ADDR((ARD)|(BWR))ADDR([LU])([0-9]+)", bit_name)
         if m:
             bgcolor = "#aa88ff"

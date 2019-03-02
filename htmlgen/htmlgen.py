@@ -113,6 +113,10 @@ def db_read(dbstate, tiletype, db_dir):
                     re.search(r"(\.[ABCD].*MUX\.)|(\.PRECYINIT\.)", tag):
                 add_pip_bits(tag, bits)
 
+            elif tiletype in ["bram_l", "bram_r"] and \
+                    re.search(r"(\.BRAM_ADDR)", tag):
+                add_pip_bits(tag, bits)
+
             else:
                 add_cfg_bits(tag, bits)
 
@@ -476,6 +480,11 @@ def get_bit_info(dbstate, frameidx, bitidx, tiletype):
                 label = m.group(1) + "SR"
             else:
                 bgcolor = "#ff0000"
+
+        m = re.search(r"\.BRAM_ADDR((ARD)|(BWR))ADDR([LU])([0-9]+)", bit_name)
+        if m:
+            bgcolor = "#aa88ff"
+            label = m.group(1)[0] + m.group(4) + m.group(5)
 
         m = re.search(r"\.([ABCD]5?)FF\.([A-Z]+(\.A|\.B)?)$", bit_name)
         if m:

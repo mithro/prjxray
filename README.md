@@ -3,6 +3,7 @@
 ![Build Status](https://travis-ci.org/SymbiFlow/prjxray.svg?branch=master)
 ![Documentation Status](https://readthedocs.org/projects/pyxray/badge/?version=latest)
 ![License](https://img.shields.io/github/license/SymbiFlow/prjxray.svg)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmithro%2Fprjxray.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmithro%2Fprjxray?ref=badge_shield)
 
 Documenting the Xilinx 7-series bit-stream format.
 
@@ -217,6 +218,9 @@ Project X-Ray repository are licensed under the very permissive
 [ISC Licence](https://opensource.org/licenses/ISC). A copy can be found in the [`LICENSE`](LICENSE) file.
 
 All new contributions must also be released under this license.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmithro%2Fprjxray.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmithro%2Fprjxray?ref=badge_large)
 
 ### Code of Conduct
 
